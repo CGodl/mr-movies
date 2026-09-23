@@ -1,3 +1,3 @@
 
-export type SortKey = "" | "title" | "release date" | "rating";
+export type SortKey = "" | "title" | "release_date" | "rating";
 

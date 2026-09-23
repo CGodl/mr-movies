@@ -6,7 +6,7 @@ export default async function HomePage() {
   return (
     <main>
       <MovieBrowser movies={movies}>
-        <p className="px-6 font-semibold font-md">The best website to find movies focused on 2025 and 2025 only</p>
+        <p className="px-6 font-semibold font-md">The best website to find movies focused on 2025 and 2025 only!</p>
       </MovieBrowser>
     </main>
   );

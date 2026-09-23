@@ -19,10 +19,10 @@ export const MovieBrowser = ({
 	const [ sortKey, setSortKey ] = useState<SortKey>("");
 
 	return (
-		<>
+		<div className='min-h-dvh bg-linear-to-r from-indigo-900 to-zinc-900'>
 			<NavBar query={query} onQueryChange={setQuery} sortKey={sortKey} setSortKey={setSortKey} />
 			{children}
 			<MovieGrid movies={movies} query={query} sortKey={sortKey}/>
-		</>
+		</div>
 	);
 };

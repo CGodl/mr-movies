@@ -11,7 +11,7 @@ type NavBarProps = {
 
 export const NavBar = ({ query, onQueryChange, sortKey, setSortKey }: NavBarProps) => {
 	return (
-		<nav className="flex items-center justify-between gap-4 px-6 py-4">
+		<nav className="flex flex-col md:flex-row items-center justify-between gap-4 px-6 py-4">
 			<div className="flex shrink-0 items-center gap-2">
                 <Clapperboard />
 				<p className="text-2xl font-semibold">Mr. Movies</p>
