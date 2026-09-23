@@ -4,6 +4,9 @@ import { useState, type ReactNode } from 'react';
 import { Movie } from '@/types/movies';
 import { NavBar } from '@/components/NavBar';
 import { MovieGrid } from '@/components/MovieGrid';
+import { SortKey } from '@/types/sortkey';
+
+
 
 export const MovieBrowser = ({
 	movies,
@@ -13,12 +16,13 @@ export const MovieBrowser = ({
 	children: ReactNode;
 }) => {
 	const [query, setQuery] = useState('');
+	const [ sortKey, setSortKey ] = useState<SortKey>("");
 
 	return (
 		<>
-			<NavBar query={query} onQueryChange={setQuery} />
+			<NavBar query={query} onQueryChange={setQuery} sortKey={sortKey} setSortKey={setSortKey} />
 			{children}
-			<MovieGrid movies={movies} query={query} />
+			<MovieGrid movies={movies} query={query} sortKey={sortKey}/>
 		</>
 	);
 };
